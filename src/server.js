@@ -24,8 +24,8 @@ if (result.error) {
 
 async function init() {
   const server = Hapi.server({
-  port: process.env.PORT || 3000
-});
+    port: process.env.PORT || 3000,
+  });
 
   await server.register(Inert);
   await server.register(Vision);
