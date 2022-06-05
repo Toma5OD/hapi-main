@@ -25,6 +25,7 @@ if (result.error) {
 async function init() {
   const server = Hapi.server({
     port: process.env.PORT || 4000,
+    routes: { cors: true },
   });
 
   await server.register(Inert);
