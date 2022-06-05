@@ -21,11 +21,15 @@ if (result.error) {
   console.log(result.error.message);
 }
 
-async function init() {
+/*async function init() {
   const server = Hapi.server({
     port: process.env.PORT || 4000,
     routes: { cors: true },
-  });
+  }); */
+async function init() {
+  const server = Hapi.server({
+  port: process.env.PORT || 3000,
+});
 
   await server.register(Inert);
   await server.register(Vision);
