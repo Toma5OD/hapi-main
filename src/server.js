@@ -19,12 +19,12 @@ const __dirname = path.dirname(__filename);
 const result = dotenv.config();
 if (result.error) {
   console.log(result.error.message);
+  // process.exit(1);
 }
 
 async function init() {
   const server = Hapi.server({
-  port: process.env.PORT || 4000,
-  routes: { cors: true },
+  port: process.env.PORT || 3000
 });
 
   await server.register(Inert);
