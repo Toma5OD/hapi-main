@@ -1,3 +1,8 @@
 config
 .idea
 node_modules
+
+# Secrets belong in deployment configuration, never source control.
+.env*
+!.env.example
+node_modules/
